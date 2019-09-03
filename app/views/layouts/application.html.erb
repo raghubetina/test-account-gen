@@ -10,6 +10,36 @@
   </head>
 
   <body>
+
+    <nav>
+
+      <% if current_member == nil %>
+        <div>
+          <a href="/sign_up">
+            Sign up
+          </a>
+        </div>
+    
+        <div>
+          <a href="/sign_in">
+            Sign in
+          </a>
+        </div>
+      <% else %>
+        <div>
+          <%= current_member.email %>
+        </div>
+        
+        <div>
+          <a href="/sign_out">
+            Sign out
+          </a>
+        </div>
+      <% end %>
+    </nav>
+
+    <p><%= notice %></p>
+    <p><%= alert %></p>
     <%= yield %>
   </body>
 </html>
