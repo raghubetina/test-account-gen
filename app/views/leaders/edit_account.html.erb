@@ -1,0 +1,44 @@
+<div >
+  <h5>
+    Edit Leader Account
+  </h5>
+
+  <div>
+    <form action="/update_leader" method="post">
+                    <div>
+        <label for="email">Email</label>
+                <input id="email" name="email" value="<%= @current_leader.email %>">
+                </div>
+        
+              
+                    <div>
+        <label for="bio">Bio</label>
+                <textarea id="bio" name="bio" rows="3"><%= @current_leader.bio %></textarea> 
+                </div>
+        
+                    <div>
+        <label for="admin">Admin</label>
+                <input id="admin" name="admin" type="checkbox" value="1">
+                </div>
+        
+                    <div>
+        <label for="username">Username</label>
+                <input id="username" name="username" value="<%= @current_leader.username %>">
+                </div>
+        
+            <div>
+        <label for="password">Password</label>
+        <input id="password" name="password" placeholder="Choose a password..." type="password">
+      </div>
+    
+      <div>
+        <label for="password_confirmation">Password Confirmation</label>
+        <input id="password_confirmation" name="password_confirmation" placeholder="Confirm your password..." type="password">
+      </div>
+
+      <button>
+        Update account
+      </button>
+    </form>
+  </div>
+</div>

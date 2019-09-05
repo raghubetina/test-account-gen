@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/firstdraft/draft_generators.git
-  revision: 6d8f147b273b5b9a3a078b1ade4c64c1223feb41
+  revision: a5a79c92cbd17c32d11caa4883eb80dff94bcab0
   branch: jw-add-account-generator
   specs:
     draft_generators (0.0.3)
