@@ -1,6 +1,10 @@
 class LeadersController < ApplicationController
-  skip_before_action(:force_leader_sign_in, { :only => [:create] })
+  skip_before_action(:force_leader_sign_in, { :only => [:new_registration_form, :create] })
   
+  def new_registration_form
+    render({ :template => "leader_sessions/sign_up.html.erb" })
+  end
+
   def create
     @leader = Leader.new
           
@@ -26,11 +30,11 @@ class LeadersController < ApplicationController
     end
   end
     
-  def edit_account
-    render({ :template => "leaders/edit_account.html.erb" })
+  def edit_registration_form
+    render({ :template => "leaders/edit_registration_form.html.erb" })
   end
 
-  def update_account
+  def update
     @leader = @current_leader
           
     @leader.email = params.fetch(:email, @leader.email)
@@ -53,7 +57,7 @@ class LeadersController < ApplicationController
     end
   end
 
-  def delete_account
+  def destroy
     @current_leader.destroy
     reset_session
     

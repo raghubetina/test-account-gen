@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+
+
   # Routes for signing up
 
-  match("/leader_sign_up", { :controller => "leader_sessions", :action => "registration_form", :via => "get"})
+  match("/leader_sign_up", { :controller => "leaders", :action => "new_registration_form", :via => "get"})
   
   # Routes for signing in
-  match("/leader_sign_in", { :controller => "leader_sessions", :action => "session_form", :via => "get"})
+  match("/leader_sign_in", { :controller => "leader_sessions", :action => "new_session_form", :via => "get"})
   
   match("/leader_verify_credentials", { :controller => "leader_sessions", :action => "add_cookie", :via => "post"})
   
@@ -14,18 +16,20 @@ Rails.application.routes.draw do
   
   # Route for creating account into database 
 
-  match("/insert_leader", { :controller => "leaders", :action => "create", :via => "post" })
+  match("/post_leader", { :controller => "leaders", :action => "create", :via => "post" })
   
   # Route for editing account
   
-  match("/edit_leader", { :controller => "leaders", :action => "edit_account", :via => "get"})
+  match("/edit_leader", { :controller => "leaders", :action => "edit_registration_form", :via => "get"})
   
-  match("/update_leader", { :controller => "leaders", :action => "update_account", :via => "post"})
+  match("/patch_leader", { :controller => "leaders", :action => "update", :via => "post"})
   
   # Route for removing an account
   
-  match("/cancel_leader_account", { :controller => "leaders", :action => "delete_account", :via => "get"})
+  match("/cancel_leader_account", { :controller => "leaders", :action => "destroy", :via => "get"})
 
+
+  #------------------------------
 
   #------------------------------
 
