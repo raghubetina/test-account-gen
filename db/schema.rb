@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_20_201030) do
+ActiveRecord::Schema.define(version: 2019_11_20_204936) do
+
+  create_table "coaches", force: :cascade do |t|
+    t.string "password_digest"
+    t.string "email"
+    t.string "first_name"
+    t.string "middle_name"
+    t.text "bio"
+    t.boolean "a_bool"
+    t.text "a_text"
+    t.date "a_date"
+    t.time "a_time"
+    t.datetime "a_datetime"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "players", force: :cascade do |t|
     t.string "email"
