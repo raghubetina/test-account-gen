@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   before_action(:force_coach_sign_in)
   
   def load_current_coach
-    @current_coach = Coach.where({ :id => session[:coach_id] }).at(0)
+    the_id = session.fetch(:coach_id)
+    @current_coach = Coach.where({ :id => the_id }).at(0)
   end
   
   def force_coach_sign_in

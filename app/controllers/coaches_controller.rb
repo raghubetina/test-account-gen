@@ -8,26 +8,26 @@ class CoachesController < ApplicationController
   def create
     @coach = Coach.new
                 
-    @coach.password = params.fetch(:password, nil)
-    @coach.password_confirmation = params.fetch(:password_confirmation, nil)
+    @coach.password = params.fetch(:password)
+    @coach.password_confirmation = params.fetch(:password_confirmation)
                 
-    @coach.email = params.fetch(:email, @coach.email)
+    @coach.email = params.fetch(:email)
                 
-    @coach.first_name = params.fetch(:first_name, @coach.first_name)
+    @coach.first_name = params.fetch(:first_name)
                 
-    @coach.middle_name = params.fetch(:middle_name, @coach.middle_name)
+    @coach.middle_name = params.fetch(:middle_name)
                 
-    @coach.bio = params.fetch(:bio, @coach.bio)
+    @coach.bio = params.fetch(:bio)
                 
-    @coach.a_bool = params.fetch(:a_bool, @coach.a_bool)
+    @coach.a_bool = params.fetch(:a_bool)
                 
-    @coach.a_text = params.fetch(:a_text, @coach.a_text)
+    @coach.a_text = params.fetch(:a_text)
                 
-    @coach.a_date = params.fetch(:a_date, @coach.a_date)
+    @coach.a_date = params.fetch(:a_date)
                 
-    @coach.a_time = params.fetch(:a_time, @coach.a_time)
+    @coach.a_time = params.fetch(:a_time)
                 
-    @coach.a_datetime = params.fetch(:a_datetime, @coach.a_datetime)
+    @coach.a_datetime = params.fetch(:a_datetime)
           
     save_status = @coach.save
 
@@ -47,26 +47,26 @@ class CoachesController < ApplicationController
   def update
     @coach = @current_coach
           
-    @coach.password = params.fetch(:password, nil)
-    @coach.password_confirmation = params.fetch(:password_confirmation, nil)
+    @coach.password = params.fetch(:password)
+    @coach.password_confirmation = params.fetch(:password_confirmation)
                 
-    @coach.email = params.fetch(:email, @coach.email)
+    @coach.email = params.fetch(:email)
                 
-    @coach.first_name = params.fetch(:first_name, @coach.first_name)
+    @coach.first_name = params.fetch(:first_name)
                 
-    @coach.middle_name = params.fetch(:middle_name, @coach.middle_name)
+    @coach.middle_name = params.fetch(:middle_name)
                 
-    @coach.bio = params.fetch(:bio, @coach.bio)
+    @coach.bio = params.fetch(:bio)
                 
-    @coach.a_bool = params.fetch(:a_bool, @coach.a_bool)
+    @coach.a_bool = params.fetch(:a_bool)
                 
-    @coach.a_text = params.fetch(:a_text, @coach.a_text)
+    @coach.a_text = params.fetch(:a_text)
                 
-    @coach.a_date = params.fetch(:a_date, @coach.a_date)
+    @coach.a_date = params.fetch(:a_date)
                 
-    @coach.a_time = params.fetch(:a_time, @coach.a_time)
+    @coach.a_time = params.fetch(:a_time)
                 
-    @coach.a_datetime = params.fetch(:a_datetime, @coach.a_datetime)
+    @coach.a_datetime = params.fetch(:a_datetime)
               
     if @coach.valid?
       @coach.save

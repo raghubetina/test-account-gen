@@ -11,19 +11,18 @@ class CoachSessionsController < ApplicationController
     the_supplied_password = params.fetch(:password)
     
     if coach != nil
-      they_are_real = coach.authenticate(the_supplied_password)
+      are_they_legit = coach.authenticate(the_supplied_password)
     
-      if they_are_real == false
+      if are_they_legit == false
         redirect_to("/sign_in", { :alert => "Password incorrect." })
       else
-        session[:coach_id] = coach.id
+        session.store(:coach_id, coach.id)
       
         redirect_to("/", { :notice => "Signed in successfully." })
       end
     else
       redirect_to("/coach_sign_in", { :alert => "There's no coach account with that email address." })
     end
-
   end
 
   def remove_cookies

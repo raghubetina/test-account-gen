@@ -8,9 +8,9 @@ one:
   bio: MyText
   a_bool: false
   a_text: MyText
-  a_date: 2019-11-20
-  a_time: 2019-11-20 14:49:36
-  a_datetime: 2019-11-20 14:49:36
+  a_date: 2019-11-21
+  a_time: 2019-11-21 10:12:39
+  a_datetime: 2019-11-21 10:12:39
 
 two:
   password_digest: MyString
@@ -20,6 +20,6 @@ two:
   bio: MyText
   a_bool: false
   a_text: MyText
-  a_date: 2019-11-20
-  a_time: 2019-11-20 14:49:36
-  a_datetime: 2019-11-20 14:49:36
+  a_date: 2019-11-21
+  a_time: 2019-11-21 10:12:39
+  a_datetime: 2019-11-21 10:12:39
